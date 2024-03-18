@@ -1,5 +1,107 @@
 ## test data on faas cloud
 
+## Cloudflare Workers
+有cron 有kv 
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.gakaki.workers.dev/
+
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.gakaki.workers.dev/
+Running 10s test @ https://ssr-svelte-benchmark.gakaki.workers.dev/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   580.46ms  344.36ms   2.00s    72.37%
+    Req/Sec    58.54     33.32   166.00     65.78%
+  5087 requests in 10.10s, 704.90MB read
+  Socket errors: connect 0, read 0, write 0, timeout 187
+Requests/sec:    503.79
+Transfer/sec:     69.81MB
+
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.gakaki.workers.dev/
+Running 10s test @ https://ssr-svelte-benchmark.gakaki.workers.dev/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   542.12ms  356.47ms   2.00s    73.91%
+    Req/Sec    63.42     34.27   181.00     67.16%
+  5573 requests in 10.09s, 775.58MB read
+  Socket errors: connect 0, read 0, write 0, timeout 160
+Requests/sec:    552.37
+Transfer/sec:     76.87MB
+
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.gakaki.workers.dev/
+Running 10s test @ https://ssr-svelte-benchmark.gakaki.workers.dev/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   617.83ms  353.64ms   1.99s    72.27%
+    Req/Sec    55.13     33.44   163.00     66.51%
+  4741 requests in 10.09s, 662.85MB read
+  Socket errors: connect 0, read 0, write 0, timeout 209
+Requests/sec:    470.01
+Transfer/sec:     65.71MB
+
+## Cloudflare Pages 无论是外网服务器还是本地都能访问到 就是部署之后要等上5分钟 
+
+Requests today
+32,027 / 100,000
+
+可以连接github的repo
+
+
+wrk -t12 -c400 -d10s https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+Running 10s test @ https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   554.68ms  358.75ms   2.00s    71.59%
+    Req/Sec    60.03     34.78   202.00     66.97%
+  5129 requests in 10.08s, 714.48MB read
+  Socket errors: connect 0, read 0, write 0, timeout 237
+Requests/sec:    508.63
+Transfer/sec:     70.85MB
+
+ wrk -t12 -c400 -d10s https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+Running 10s test @ https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   576.83ms  358.59ms   2.00s    70.78%
+    Req/Sec    57.96     31.41   190.00     66.46%
+  4934 requests in 10.08s, 690.09MB read
+  Socket errors: connect 0, read 0, write 0, timeout 211
+Requests/sec:    489.54
+Transfer/sec:     68.47MB
+
+
+Running 10s test @ https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   555.81ms  357.65ms   1.99s    70.76%
+    Req/Sec    62.84     34.17   194.00     68.45%
+  5860 requests in 10.09s, 810.87MB read
+  Socket errors: connect 0, read 0, write 0, timeout 73
+Requests/sec:    580.79
+Transfer/sec:     80.37MB
+
+
+wrk -t12 -c400 -d10s https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+
+Running 10s test @ https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   489.10ms  217.70ms   1.87s    79.29%
+    Req/Sec    44.52     31.65   191.00     63.27%
+  4434 requests in 10.08s, 601.97MB read
+  Socket errors: connect 158, read 0, write 0, timeout 12
+Requests/sec:    439.97
+Transfer/sec:     59.73MB
+
+wrk -t12 -c400 -d10s https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+
+Running 10s test @ https://1ba3fd77.ssr-svelte-benchmark.pages.dev
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   497.88ms  242.09ms   1.93s    75.65%
+    Req/Sec    42.12     33.50   202.00     79.35%
+  4218 requests in 10.10s, 579.00MB read
+  Socket errors: connect 158, read 0, write 0, timeout 8
+Requests/sec:    417.80
+Transfer/sec:     57.35MB
 
 ## Vercel
 pnpm i -D @sveltejs/adapter-vercel

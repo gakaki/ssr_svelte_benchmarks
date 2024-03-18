@@ -1,0 +1,11 @@
+
+name = "ssr-svelte-benchmark"
+account_id = "eff9f6a4d3b9b297b17f009ef62f1f49"
+
+main = "./.cloudflare/worker.js"
+site.bucket = "./.cloudflare/public"
+
+build.command = "npm run build"
+
+compatibility_date = "2021-11-12"
+workers_dev = true
