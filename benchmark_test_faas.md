@@ -1,32 +1,5 @@
 
-## vercel
-can not visit in china , need 科学上网,使用科学上网后测试的数据
-\
-<!-- wrk -t12 -c400 -d10s https://ssr-svelte-benchmark-nf5uu0c60-warlbor.vercel.app/ -->
 
-wrk -t12 -c400 -d10s https://ssr-svelte-benchmark-nf5uu0c60-warlbor.vercel.app
-Running 10s test @ https://ssr-svelte-benchmark-nf5uu0c60-warlbor.vercel.app
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   105.03ms  131.03ms   1.42s    93.83%
-    Req/Sec   354.65    149.30     0.96k    69.44%
-  35899 requests in 10.10s, 464.40MB read
-  Non-2xx or 3xx responses: 35899
-Requests/sec:   3555.25
-Transfer/sec:     45.99MB
-
-
-wrk -t12 -c400 -d10s https://ssr-svelte-benchmark-nf5uu0c60-warlbor.vercel.app
-Running 10s test @ https://ssr-svelte-benchmark-nf5uu0c60-warlbor.vercel.app
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   105.29ms  136.76ms   1.54s    94.13%
-    Req/Sec   351.36    162.55   818.00     69.32%
-  35185 requests in 10.12s, 420.12MB read
-  Socket errors: connect 125, read 265, write 0, timeout 0
-  Non-2xx or 3xx responses: 35185
-Requests/sec:   3475.50
-Transfer/sec:     41.50MB
 
 ## Node 21.7.1
 export NODE_ENV=production
