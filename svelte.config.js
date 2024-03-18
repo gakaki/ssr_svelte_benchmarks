@@ -20,9 +20,12 @@
 // pnpm i -D @sveltejs/adapter-cloudflare
 // for cloudflare-workers
 
-import adapter from '@sveltejs/adapter-netlify';
+// import adapter from '@sveltejs/adapter-netlify';
 
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+
+
+import adapter from '@sveltejs/adapter-cloudflare';
 const adapterCloudflarePages = adapter({
   // See below for an explanation of these options
   routes: {
@@ -42,7 +45,7 @@ const adapterNetlifyEdge =  adapter({
 
 const config = {
   kit: {
-    adapter:adapterCloudflarePages()
+    adapter:adapterCloudflarePages
   },
   preprocess: vitePreprocess(),
 };
