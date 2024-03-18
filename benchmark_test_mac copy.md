@@ -63,4 +63,38 @@ Requests/sec:     84.00
 Transfer/sec:      8.01MB
 
 
-## Netlify disable edge mode
+## Netlify disable edge mode 特别容易访问限制
+
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.netlify.app/
+Running 10s test @ https://ssr-svelte-benchmark.netlify.app/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   608.65ms  338.17ms   1.98s    82.20%
+    Req/Sec    45.82     30.64   173.00     69.25%
+  2356 requests in 10.10s, 321.46MB read
+  Socket errors: connect 1792, read 476, write 0, timeout 13
+Requests/sec:    233.38
+Transfer/sec:     31.84MB
+
+wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.netlify.app
+Running 10s test @ https://ssr-svelte-benchmark.netlify.app
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.12s   404.78ms   1.98s    65.24%
+    Req/Sec    18.30     16.52    70.00     75.65%
+  518 requests in 10.09s, 81.56MB read
+  Socket errors: connect 2164, read 348, write 0, timeout 3
+Requests/sec:     51.36
+Transfer/sec:      8.09MB
+
+ wrk -t12 -c400 -d10s https://ssr-svelte-benchmark.netlify.app
+Running 10s test @ https://ssr-svelte-benchmark.netlify.app
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     0.00us    0.00us   0.00us     nan%
+    Req/Sec     0.00      0.00     0.00       nan%
+  0 requests in 10.10s, 20.74KB read
+  Socket errors: connect 158, read 120, write 0, timeout 0
+Requests/sec:      0.00
+Transfer/sec:      2.05KB
+

@@ -14,33 +14,35 @@
 // deno run --allow-env --allow-read --allow-net mod.ts
 
 // import adapter from '@sveltejs/adapter-vercel';
+
+
+// for cloudflare-pages
+// pnpm i -D @sveltejs/adapter-cloudflare
+// for cloudflare-workers
+
 import adapter from '@sveltejs/adapter-netlify';
 
-
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+const adapterCloudflarePages = adapter({
+  // See below for an explanation of these options
+  routes: {
+    include: ['/*'],
+    exclude: ['<all>']
+  }
+})
+const adapterNetlifyDisableEdge =  adapter({
+  // if true, will create a Netlify Edge Function rather
+  // than using standard Node-based functions
+  edge: false,
+  split: false
+})
+const adapterNetlifyEdge =  adapter({
+  edge: true
+})
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter({
-			// if true, will create a Netlify Edge Function rather
-			// than using standard Node-based functions
-			edge: false,
-
-			// if true, will split your app into multiple functions
-			// instead of creating a single one for the entire app.
-			// if `edge` is true, this option cannot be used
-			split: false
-		})
-    // adapter: adapter({
-    //   // default options are shown. On some platforms
-    //   // these options are set automatically — see below
-    //   pages: "build",
-    //   assets: "build",
-    //   fallback: undefined,
-    //   precompress: false,
-    //   strict: false,
-    // }),
+    adapter:adapterCloudflarePages()
   },
   preprocess: vitePreprocess(),
 };
