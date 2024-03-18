@@ -2,8 +2,8 @@
 
 
 ## Vercel
+pnpm i -D @sveltejs/adapter-vercel
 
-## Bun v1.0.33
 bun -v
 
 curl -fsSL https://bun.sh/install | bash

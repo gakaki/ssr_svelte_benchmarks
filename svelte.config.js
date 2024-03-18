@@ -9,10 +9,11 @@
 // import adapter from '@sveltejs/adapter-node';
 
 // for deno someissuse 500 can not build success
-import adapter from 'sveltekit-adapter-deno';
+// import adapter from 'sveltekit-adapter-deno';
 // pnpm run build
 // deno run --allow-env --allow-read --allow-net mod.ts
 
+import adapter from '@sveltejs/adapter-vercel';
 
 
 
