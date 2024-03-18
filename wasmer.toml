@@ -1,0 +1,12 @@
+[package]
+name = "gakaki/ssr-svelte-benchmark"
+version = "0.2.0"
+description = "Svelte Wasmer starter package"
+readme = "README.md"
+repository = "https://github.com/gakaki/ssr-svelte-benchmark"
+
+[dependencies]
+"wasmer/static-web-server" = "*"
+
+[fs]
+public = "build"

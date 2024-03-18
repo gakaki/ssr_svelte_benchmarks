@@ -1,0 +1,3 @@
+kind: wasmer.io/App.v0
+name: gakaki-ssr-svelte-benchmark
+package: gakaki/ssr-svelte-benchmark
