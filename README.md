@@ -66,6 +66,12 @@ https://bun.sh/guides/ecosystem/sveltekit
 
 
 #### Serverless FaaS 测试环境 (待续)
+#### Vercel
+
+
+#### Netlify
+pnpm i -D @sveltejs/adapter-netlify
+
 
 #### Deno Land(待续)
 

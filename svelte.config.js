@@ -13,7 +13,8 @@
 // pnpm run build
 // deno run --allow-env --allow-read --allow-net mod.ts
 
-import adapter from '@sveltejs/adapter-vercel';
+// import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-netlify';
 
 
 
@@ -23,14 +24,24 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 const config = {
   kit: {
     adapter: adapter({
-      // default options are shown. On some platforms
-      // these options are set automatically — see below
-      pages: "build",
-      assets: "build",
-      fallback: undefined,
-      precompress: false,
-      strict: false,
-    }),
+			// if true, will create a Netlify Edge Function rather
+			// than using standard Node-based functions
+			edge: true,
+
+			// if true, will split your app into multiple functions
+			// instead of creating a single one for the entire app.
+			// if `edge` is true, this option cannot be used
+			// split: false
+		})
+    // adapter: adapter({
+    //   // default options are shown. On some platforms
+    //   // these options are set automatically — see below
+    //   pages: "build",
+    //   assets: "build",
+    //   fallback: undefined,
+    //   precompress: false,
+    //   strict: false,
+    // }),
   },
   preprocess: vitePreprocess(),
 };
