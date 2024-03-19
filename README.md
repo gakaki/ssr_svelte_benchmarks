@@ -22,7 +22,9 @@
 
 ### 项目简介
 
-[视频演示](https://www.bilibili.com/video/BV12Q4y1376h)
+<img src="README.png" width=70% height=40%>
+
+[视频演示](./README.mp4)
 
 [演示地址](https://ssr-svelte-benchmark.netlify.app/)
 
