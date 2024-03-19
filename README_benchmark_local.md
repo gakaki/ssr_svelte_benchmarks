@@ -1,55 +1,42 @@
-
-
-
 ## Node 21.7.1
 export NODE_ENV=production
 node build/index.js
 
-wrk -t12 -c400 -d10s http://127.0.0.1:3000
-Running 10s test @ http://127.0.0.1:3000
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   151.36ms   92.26ms   1.99s    94.49%
-    Req/Sec    39.79     22.79   181.00     71.01%
-  4388 requests in 10.09s, 587.96MB read
-  Socket errors: connect 155, read 500, write 2, timeout 52
-Requests/sec:    434.81
-Transfer/sec:     58.26MB
+    wrk -t12 -c400 -d10s http://127.0.0.1:3000
+    Running 10s test @ http://127.0.0.1:3000
+      12 threads and 400 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   151.36ms   92.26ms   1.99s    94.49%
+        Req/Sec    39.79     22.79   181.00     71.01%
+      4388 requests in 10.09s, 587.96MB read
+      Socket errors: connect 155, read 500, write 2, timeout 52
+    Requests/sec:    434.81
+    Transfer/sec:     58.26MB
 
-wrk -t12 -c400 -d10s http://127.0.0.1:3000
-Running 10s test @ http://127.0.0.1:3000
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   146.49ms   92.85ms   1.94s    95.06%
-    Req/Sec    39.13     25.22   212.00     74.82%
-  4465 requests in 10.08s, 598.25MB read
-  Socket errors: connect 155, read 458, write 4, timeout 55
-Requests/sec:    442.79
-Transfer/sec:     59.33MB
+    wrk -t12 -c400 -d10s http://127.0.0.1:3000
+    Running 10s test @ http://127.0.0.1:3000
+      12 threads and 400 connections
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   146.49ms   92.85ms   1.94s    95.06%
+        Req/Sec    39.13     25.22   212.00     74.82%
+      4465 requests in 10.08s, 598.25MB read
+      Socket errors: connect 155, read 458, write 4, timeout 55
+    Requests/sec:    442.79
+    Transfer/sec:     59.33MB
 
- wrk -t12 -c400 -d10s http://127.0.0.1:3000
-Running 10s test @ http://127.0.0.1:3000
-  12 threads and 400 connections
+    wrk -t12 -c400 -d10s http://127.0.0.1:3000
+    Running 10s test @ http://127.0.0.1:3000
+      12 threads and 400 connections
 
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   145.81ms   90.60ms   1.95s    93.57%
-    Req/Sec    43.62     29.48   220.00     75.32%
-  4592 requests in 10.09s, 615.30MB read
-  Socket errors: connect 155, read 413, write 2, timeout 54
-Requests/sec:    455.25
-Transfer/sec:     61.00MB
+      Thread Stats   Avg      Stdev     Max   +/- Stdev
+        Latency   145.81ms   90.60ms   1.95s    93.57%
+        Req/Sec    43.62     29.48   220.00     75.32%
+      4592 requests in 10.09s, 615.30MB read
+      Socket errors: connect 155, read 413, write 2, timeout 54
+    Requests/sec:    455.25
+    Transfer/sec:     61.00MB
 
 
- wrk -t12 -c400 -d10s http://127.0.0.1:3000
-Running 10s test @ http://127.0.0.1:3000
-  12 threads and 400 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   144.48ms   86.07ms   1.73s    90.07%
-    Req/Sec    41.93     25.72   202.00     65.34%
-  4505 requests in 10.10s, 603.59MB read
-  Socket errors: connect 155, read 610, write 5, timeout 55
-Requests/sec:    445.90
-Transfer/sec:     59.74MB
 
 
 ## Bun v1.0.33
