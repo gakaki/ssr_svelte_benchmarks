@@ -1,26 +1,11 @@
 ## ssr_svelte_benchmarks [进行中]
 
-#### 目录结构
 
-    ├── app.yaml                      # 云函数配置
-    ├── crawler_wallstreetcn
-    ├── layout.md
-    ├── package.json
-    ├── src
-    │   ├── app.css
-    │   ├── app.html
-    │   ├── lib
-    │   │   ├── redis.ts
-    │   │   └── type.ts
-    │   └── routes
-    │       ├── +layout.svelte
-    │       ├── +page.server.ts
-    │       ├── +page.svelte
-    ├── svelte.config.js
-    ├── vite.config.js
-    └── wasmer.toml
 
 ### 项目简介
+
+本地与云端的serverless JS Runtime 环境 + Svelte SSR 的性能测试: Demo华尔街见闻首页(80%的页面内容)
+
 
 <img src="README.png" width=70% height=40%>
 
@@ -28,7 +13,25 @@
 
 [演示地址](https://ssr-svelte-benchmark.netlify.app/)
 
-本地与云端的serverless JS Runtime 环境 + Svelte SSR 的性能测试: Demo华尔街见闻首页(80%的页面内容)
+
+#### 目录结构
+
+    ├── app.yaml                      # 云函数配置
+    ├── crawler_wallstreetcn          # go爬虫程序API
+    ├── package.json
+    ├── src                           # sveltekit
+    │   ├── app.css
+    │   ├── app.html
+    │   ├── lib
+    │   │   ├── redis.ts
+    │   │   └── type.ts
+    │   └── routes     
+    │       ├── +layout.svelte          # 布局
+    │       ├── +page.server.ts         
+    │       ├── +page.svelte
+    ├── svelte.config.js
+    ├── vite.config.js
+    └── wasmer.toml
 
 
 ### 数据来源
