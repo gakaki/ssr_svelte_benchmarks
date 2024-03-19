@@ -9,7 +9,9 @@
 
 <img src="README.png" width=70% height=40%>
 
-[视频演示](./README.mp4)
+
+https://github.com/gakaki/ssr_svelte_benchmarks/assets/5296/5c48eeb4-2f60-4290-b5e9-6b70bb21c4a9
+
 
 [演示地址](https://ssr-svelte-benchmark.netlify.app/)
 
