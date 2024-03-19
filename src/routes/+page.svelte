@@ -17,6 +17,9 @@
     const formattedPercentage = toFixed2(percentage) + "%";
     return `+${formattedNumber}(+${formattedPercentage})`;
   }
+  function convertImage(image_url){
+    return image_url + "?imageView2/1/w/512/h/288/format/webp";
+  }
 
   let data_real_obj = {};
   for (let [key, value] of Object.entries(data.MarketReal.snapshot)) {
@@ -29,7 +32,7 @@
     }
   }
   // console.log(data_real_obj);
-
+  
   let data_infomation_flows5 = [];
   for (const [key, value] of Object.entries(
     data.InformationFlow.items.slice(0, 5),
@@ -37,7 +40,7 @@
     if (value) {
       // console.log(value);
       data_infomation_flows5.push({
-        image: value.resource.image.uri,
+        image: convertImage(value.resource.image.uri),
         title: value.resource.title,
         url: value.resource.uri,
       });
@@ -52,7 +55,7 @@
     if (value) {
       // console.log(value);
       data_infomation_flows.push({
-        image: value.resource.image.uri,
+        image: convertImage(value.resource.image.uri),
         title: value.resource.title,
         short: value.resource.content_short,
         author: value.resource.author.display_name,
@@ -164,7 +167,7 @@
         title: value.related_topics[0].title,
         content: value.content_short,
         url: value.uri,
-        image: value.image.uri,
+        image: convertImage(value.image.uri),
         display_time: formatDateString(value.display_time),
       });
     }

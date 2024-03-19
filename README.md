@@ -72,4 +72,16 @@ MacBook Air M1 2020 16G 256G
 
 ### Webp avif格式可以减少图片大小到 70%
 
+[原图jpeg格式](https://wpimg-wscn.awtmt.com/7d4e6dbf-6db3-4814-beba-d455187d848c.jpeg?imageView2/1/w/512/h/288) 21.9kb 
+
+[webp格式](https://wpimg-wscn.awtmt.com/7d4e6dbf-6db3-4814-beba-d455187d848c.jpeg?imageView2/1/w/512/h/288/format/webp) 15.4kb 
+可在七牛云里打开 avif webp 自适应,可自动检测手机浏览器自动转换无需追加url
+
+[CanIUse兼容性良好](https://caniuse.com/?search=webp)
+
+[avif格式](https://wpimg-wscn.awtmt.com/7d4e6dbf-6db3-4814-beba-d455187d848c.jpeg?imageView2/1/w/512/h/288/format/avif)报错 预计可以到55% 65%
+
+    {"error":"The output format is avif, please use pfop or workflow service"}
+
+    
 
